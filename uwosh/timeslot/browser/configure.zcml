@@ -37,12 +37,21 @@
         class=".removeallpeople.RemoveAllPeopleForm"
         permission="uwosh.timeslot.ManageSchedule"
         />
-	
+  
     <browser:page
       for="..interfaces.ISignupSheet"
       name="choose-timeslot-view"
       class=".choosetimeslot.ChooseTimeSlot"
       template="choosetimeslot.pt"
+      allowed_interface=".choosetimeslot.IChooseTimeSlot"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="..interfaces.ISignupSheet"
+      name="choose-timeslot-view-extended"
+      class=".choosetimeslot.ChooseTimeSlot"
+      template="choosetimeslotextended.pt"
       allowed_interface=".choosetimeslot.IChooseTimeSlot"
       permission="zope2.View"
       />
@@ -84,6 +93,14 @@
       title="Choose TimeSlot View"
       action="choose-timeslot-view"
       description="The default user visible view of a Signup Sheet"
+      />
+        
+    <browser:menuItem
+      for="..interfaces.ISignupSheet"
+      menu="plone_displayviews"
+      title="Choose TimeSlot View (extended)"
+      action="choose-timeslot-view-extended"
+      description="A user visible view of a Signup Sheet showing description and room"
       />
         
 </configure>

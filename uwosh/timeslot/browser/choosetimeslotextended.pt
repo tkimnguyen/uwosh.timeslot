@@ -32,7 +32,7 @@
       </div>
 		
       <form method="post" tal:attributes="action string:${context/absolute_url}/@@submit-user-selection;">
-        <table class="plain" tal:define="days context/getDays">
+        <table id="uwoshTimeslotSignupSheet" class="plain" tal:define="days context/getDays">
 	  
 	  <tr tal:condition="not:days" style="background-color: #F0F0F0">
 	    <th style="border: none">

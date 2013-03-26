@@ -1,6 +1,9 @@
 Introduction
 ============
 
+This product was enhanced for use by Classified Staff Development and 
+Appreciation Day (CSDAD) at UW Oshkosh.
+
 uwosh.timeslot offers a simple way to allow users of a Plone site to
 register for events (for example: training sessions).
 

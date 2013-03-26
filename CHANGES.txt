@@ -1,6 +1,21 @@
 Changelog
 =========
 
+1.5.1-csdad - 2013-03-26
+------------------------
+
+* added CSS ID uwoshTimeslotSignupSheet to the table in both choose timeslot
+  views
+
+
+1.5.0-csdad - 2013-03-15
+------------------------
+
+* added rich text field for timeslot description
+
+* added string field for room
+
+
 1.5.0 - 2011-05-19
 ------------------
 

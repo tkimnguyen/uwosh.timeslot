@@ -32,6 +32,26 @@ TimeSlotSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                             description=_(u'Optional name'))
     ),
 
+    atapi.TextField('timeslotdescription',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.RichWidget(label=_('Timeslot description'),
+                            description=_(u'Optional description')),
+        required=1,
+        searchable=1,
+        default_content_type="text/html",
+        default_output_type="text/html",
+        allowable_content_types=("text/plain",
+                                 "text/restructured",
+                                 "text/html",
+                                 "application/msword"),
+    ),
+
+    atapi.StringField('room',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(label=_('Room'),
+                            description=_(u'Optional room'))
+    ),
+
     atapi.IntegerField('maxCapacity',
         storage=atapi.AnnotationStorage(),
         default=1,
@@ -59,12 +79,14 @@ schemata.finalizeATCTSchema(TimeSlotSchema, folderish=True, moveDiscussion=False
 
 class TimeSlot(folder.ATFolder):
     implements(ITimeSlot, ICloneable)
-	
+    
     portal_type = 'Time Slot'
     schema = TimeSlotSchema
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
+    timeslotdescription = atapi.ATFieldProperty('timeslotdescription')
+    room = atapi.ATFieldProperty('room')
     maxCapacity = atapi.ATFieldProperty('maxCapacity')
     allowWaitingList = atapi.ATFieldProperty('allowWaitingList')
     startTime = atapi.ATFieldProperty('startTime')

@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '1.5.0'
+version = '1.5.1-csdad'
 
 long_description = (
     read('README.txt')
@@ -20,7 +20,7 @@ tests_require=['zope.testing']
 
 setup(name='uwosh.timeslot',
       version=version,
-      description="A Plone 3.x scheduling product",
+      description="A Plone scheduling product",
       long_description=long_description,
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -29,9 +29,9 @@ setup(name='uwosh.timeslot',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
-      keywords='',
-      author='Marshall Scorcio',
-      author_email='marshall.scorcio@gmail.com',
+      keywords='scheduling',
+      author='T. Kim Nguyen',
+      author_email='nguyen@uwosh.edu',
       url='http://www.uwosh.edu/ploneprojects/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),

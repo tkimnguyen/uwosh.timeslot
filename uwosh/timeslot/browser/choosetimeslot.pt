@@ -32,7 +32,7 @@
       </div>
 		
       <form method="post" tal:attributes="action string:${context/absolute_url}/@@submit-user-selection;">
-        <table class="plain" tal:define="days context/getDays">
+        <table id="uwoshTimeslotSignupSheet" class="plain" tal:define="days context/getDays">
 	  
 	  <tr tal:condition="not:days" style="background-color: #F0F0F0">
 	    <th style="border: none">
@@ -42,7 +42,7 @@
 
 	  <tal:block tal:repeat="day days">
 	    <tr style="background-color: #F0F0F0">
-	      <th colspan="4" style="text-align: left; border: none">
+	      <th colspan="6" style="text-align: left; border: none">
 		<h4 style="float: left" tal:content="day/Title" />
 	        <span style="float: left" tal:condition="view/showEditLinks">
 		  &nbsp;<a tal:attributes="href string:${day/absolute_url}/edit">Edit</a>
