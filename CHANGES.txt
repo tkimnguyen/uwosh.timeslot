@@ -1,19 +1,27 @@
 Changelog
 =========
 
+1.5.2-csdad - 2013-05-10
+------------------------
+
+* added extended view to allowable views for signup sheets [tkimnguyen]
+
+* added room header and values to CSV export [tkimnguyen]
+
+
 1.5.1-csdad - 2013-03-26
 ------------------------
 
 * added CSS ID uwoshTimeslotSignupSheet to the table in both choose timeslot
-  views
+  views [tkimnguyen]
 
 
 1.5.0-csdad - 2013-03-15
 ------------------------
 
-* added rich text field for timeslot description
+* added rich text field for timeslot description [tkimnguyen]
 
-* added string field for room
+* added string field for room [tkimnguyen]
 
 
 1.5.0 - 2011-05-19

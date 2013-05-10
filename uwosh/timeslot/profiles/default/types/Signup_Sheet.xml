@@ -19,6 +19,7 @@
   <property name="default_view">choose-timeslot-view</property>
   <property name="view_methods">
     <element value="choose-timeslot-view" />
+    <element value="choose-timeslot-view-extended" />
   </property>
   <alias from="(Default)" to="(dynamic view)" />
   <alias from="edit" to="atct_edit" />
